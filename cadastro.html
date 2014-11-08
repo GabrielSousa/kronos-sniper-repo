@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        <title>SISUS - Cadastro</title>
+         
+        <!-- Bootstrap core CSS -->
+        <link href="//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css" rel="stylesheet">
+
+        <!-- Custom styles for this template -->
+        <link href="../css/crud-principal.css" rel="stylesheet">
+        <!-- Styles for this template, but with my changes  -->
+        <link rel="stylesheet" href="css/style.css">
+    </head>
+    <body>
+        
+    <p>
+    <div  align="center" >
+        <div align="center"  class="linha">
+            <div class="coluna"> <font size="5" face="verdana"> CADASTRO <br/> </font> </div>
+        </div>
+        <div class="linha">  
+            <div class="coluna"> <br /> </div>
+        </div>
+        <div class="linha">  
+            <div class="coluna"> <br /> </div>
+        </div>
+        <form action="/html/tags/html_form_tag_action.cfm" method="get"> 
+            <div align="center"  class="linha">
+                <div class="coluna"> Nome : <br/> </div>
+                <div class="coluna"> <input type="text" value="" maxlength="100" placeholder = "Nome Completo" required autofocus/> </div>
+            </div>
+            <div align="center"  class="linha">
+                <div class="coluna"> E-mail : <br/> </div>
+                <div class="coluna"> <input type="email" maxlength="100" placeholder = "Email" required /> </div>
+            </div>
+            <div align="center"  class="linha">
+                <div class="coluna"> Cidade : <br /> </div>
+                <div class="coluna"> 
+                    <select required>
+                    <option value="zero" selected>Selecione a sua cidade</option>
+                    <option value="saab_branco">Pato Branco</option>
+                    <option value="francisco_beltrao">Francisco Beltrão</option>
+                    </select> 
+                </div>
+            </div>
+            <div  align="center"  class="linha">
+                <div class="coluna"> Sexo :  <br /> </div>
+                <div class="coluna"> 
+                    <select required>
+                    <option value="masc" selected>Masculino</option>
+                    <option value="fem">Feminino</option>
+                    </select>
+                    </div>
+            </div>
+            <div class="linha">  
+                <div class="coluna"> <br /> </div>
+            </div>
+            <div align="center"  class="linha" >
+                <div class="coluna"> <input class="botao" type="submit" value="Confirmar" > </div>
+            </div>
+        </form> 
+
+    </div>
+    </p>
+
+    </body>
+</html>
