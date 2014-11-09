@@ -28,6 +28,31 @@
 <!-- Custom Fonts -->
 <link href="font-awesome-4.1.0/css/font-awesome.min.css"
 	rel="stylesheet" type="text/css">
+    
+<!-- Lista JS -->
+    <script src="js/lista.js"></script>
+
+    <script>
+        function loop(){
+            var table = $('#values')[0];
+            for(i=0;i<10;i++){
+                addRow(table, 'Gabriel', 'email'+i+'@emailJS.com', 'White Duck', 'M');
+            }
+        }
+
+        function mostrarFormulario(){
+            $('#lista').hide().delay(1000).fadeOut(2200);
+            $('#divFormulario').fadeIn();
+        }
+
+        function inserirLinha(){
+            addRow($('#values')[0], $('#nome').val(), $('#email').val(), $('#cidade').val(), $('#sexo').val());
+            $('#formFormulario')[0].reset();
+            $('#divFormulario').hide().delay(1000).fadeOut(2200);
+            $('#lista').fadeIn(1000);
+            console.log('SS');
+        }
+    </script>
 </head>
 
 <body>
@@ -201,7 +226,45 @@
 			</div>
 		</nav>
 
+        
+        <div class="container" id="divFormulario" style="position: absolute; margin-left:550px; margin-top:30px; margin-bottom:100px; width:400px;  height:340px;z-index:1">
+			<form class="form-signin" role="form" id="formFormulario">
+				</centring> <h3 class="form-signin-heading">Dados do Paciente</h2>
+				<input type="text" class="form-control" placeholder="Nome Completo" required autofocus id="nome">
+				<input type="email" class="form-control" placeholder="Email" required id="email">
+				<select class="form-control" required id="cidade">
+					<option value="">Selecione a sua cidade</option>
+					<option>Pato Branco</option>
+					<option>Francisco Beltrão</option>
+				</select>
+				<select class="form-control" required id="sexo">
+					<option>Masculino</option>
+					<option>Feminino</option>
+				</select>
+				<button class="btn btn-lg btn-primary btn-block" type="submit" onclick="inserirLinha()">Cadastrar</button>
+			</form>
+		</div>
+        
+		<div class="container" id="lista" style="position: absolute; margin-left:360px; margin-top:370px; margin-bottom:100px; width:800px;  height:340px;">
+			<div class="table-responsive">
+				<table id="list" class="table table-striped">
+					<thead>
+						<tr>
+							<th>Nome</th>
+							<th>Email</th>
+							<th>Cidade</th>
+							<th>Sexo</th>
+							<th></th>
+						</tr>
+					</thead>
+					<tbody id="values">
+						<!-- Lista -->
+					</tbody>
+				</table>
+			</div>
+		</div>
 		
+        
 			
 		<!-- AKKKKIIIIIII -->
 
